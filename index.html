@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital clock</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .clock{
+            width: 40%;
+            margin: 0 auto;
+            background-color: black;
+            color: white;
+            padding: 30px;
+        }
+        .border{
+            border: 5px solid white;
+            padding: 20px;
+        }
+        .flex{
+            display: flex;
+            justify-content: space-between;
+        }
+        .date{
+            border: 3px solid white;
+            padding: 0px 15px;
+        }
+        .time{
+            border: 3px solid white;
+            padding: 0px 15px ;
+        }
+        .days{
+            display: flex;
+            justify-content: space-between;
+        }
+        .day{
+            width: 75%;
+            margin: 10px 0px;
+            border: 2px solid white;
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0px;
+        }
+        .am{
+            width: 20%;
+            margin: 10px 0px;
+            padding: 10px 0px;
+            border: 2px solid white;
+        }
+    </style>
+</head>
+<body>
+    <div class="clock">
+        <div class="border">
+            <div>
+                <div class="flex">
+                    <p>Date</p>
+                    <p>Mon</p>
+                    <p>Year</p>
+                </div>
+                <div class="flex date">
+                    <h1 id="date"></h1>
+                    <h1 id="mon"></h1>
+                    <h1 id="year"></h1>
+                </div>
+            </div>
+            <div>
+                <div class="flex">
+                    <p>Hour</p>
+                    <p>Minute</p>
+                    <p>Secound</p>
+                </div>
+                <div onload="showTime()" class="flex time">
+                    <h1 id="hour"></h1>
+                    <h1>:</h1>
+                    <h1 id="min"></h1>
+                    <h1>:</h1>
+                    <h1 id="sec"></h1>
+                </div>
+            </div>
+            <div class="days">
+                <div class="day">
+                    <div>
+                        <input type="radio" id="sunday">
+                        <label>Sun</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="monday">
+                        <label>Mon</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="tuesday">
+                        <label>Tue</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="wednesday">
+                        <label>Wed</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="monday">
+                        <label>Thu</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="thursday">
+                        <label>Fri</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="saturday">
+                        <label>Sat</label>
+                    </div>
+                </div>
+                <div class="am">
+                    <div>
+                        <input type="radio" id="am">
+                        <label>AM</label>
+                    </div>
+                    <div>
+                        <input type="radio" id="pm">
+                        <label>PM</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
